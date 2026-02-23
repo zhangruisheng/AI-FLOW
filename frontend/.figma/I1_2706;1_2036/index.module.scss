@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+.instance {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 10px;
+  border-radius: 51px;
+  background: var(--White-100, #ffffff);
+  padding: 10px;
+  width: 24px;
+  height: 24px;
+
+  .icon {
+    flex-shrink: 0;
+    width: 12px;
+    height: 12px;
+  }
+}

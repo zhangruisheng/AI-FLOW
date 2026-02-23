@@ -1,0 +1,468 @@
+@import url('https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600;700&display=swap');
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  /* The default background color for the application. */
+  --background: rgba(241, 244, 255, 1.00);
+  /* The default color for elements or text that appears on top of the background. */
+  --foreground: rgba(28, 28, 28, 1.00);
+  /* The background color for cards, modals, and other containers. */
+  --card: rgba(255, 255, 255, 1.00);
+  /* The default color for text or elements that appear on top of cards, modals and other background containers. */
+  --card-foreground: rgba(28, 28, 28, 1.00);
+  /* The background color for dropdowns and tooltips. */
+  --popover: rgba(255, 255, 255, 0.60);
+  /* The default color for text or elements that appear on top of dropdowns and tooltips. */
+  --popover-foreground: rgba(28, 28, 28, 1.00);
+  /* The primary color used for buttons, links, and other interactive elements. */
+  --primary: rgba(0, 228, 36, 1.00);
+  /* The default color for text or elements that appear on top of primary colored elements. */
+  --primary-foreground: rgba(255, 255, 255, 1.00);
+  /* The secondary color used for secondary(but NOT-DESTRUCTIVE) buttons and interactive elements. */
+  --secondary: rgba(0, 0, 0, 0.04);
+  /* The default color for text or elements that appear on top of secondary colored elements. */
+  --secondary-foreground: rgba(28, 28, 28, 1.00);
+  /* The muted color used for less prominent elements, such as disabled buttons or disabled text. */
+  --muted: rgba(28, 28, 28, 0.05);
+  /* The default color for text or elements that appear on top of muted colored elements. */
+  --muted-foreground: rgba(28, 28, 28, 0.40);
+  /* The accent color used for highlights, links, and other interactive elements. */
+  --accent: rgba(0, 228, 36, 1.00);
+  /* The default color for text or elements that appear on top of accent colored elements. */
+  --accent-foreground: rgba(255, 255, 255, 1.00);
+  /* The color used for background in destructive actions, such as delete buttons or error messages. */
+  --destructive: rgba(239, 68, 68, 1.00);
+  /* The default color for text or elements that appear on top of destructive colored elements. */
+  --destructive-foreground: rgba(255, 255, 255, 1.00);
+  /* The default border color for elements such as inputs, buttons, and other containers. */
+  --border: rgba(255, 255, 255, 0.10);
+  /* The default background color for input fields once the text has been filled. Should be either transparent or match the input-background. */
+  --input: rgba(28, 28, 28, 0.05);
+  /* The default background color for input fields, text areas, and other input elements. */
+  --input-background: rgba(28, 28, 28, 0.05);
+  /* Custom Color Variables */
+  --Black-3: rgba(0, 0, 0, 0.03);
+  --Black-40: rgba(28, 28, 28, 0.40);
+  --Black-100: rgba(28, 28, 28, 1.00);
+  --Brand-Doubao-100: rgba(0, 228, 36, 1.00);
+  
+  /* =========================================== */
+  /* Creation Page Design System */
+  /* =========================================== */
+  
+  /* Group Container - Outer container for settings panels */
+  --creation-group-bg: rgba(0, 0, 0, 0.03);
+  /* Inner Card - White cards inside group containers */
+  --creation-card-bg: rgba(255, 255, 255, 1.00);
+  /* Icon Button - Small circular buttons with icons */
+  --creation-icon-btn-bg: rgba(0, 0, 0, 0.03);
+  /* Toggle Switch Knob - The circular part of toggle switches */
+  --creation-toggle-knob-bg: rgba(255, 255, 255, 1.00);
+  /* Toggle Switch Track (disabled state) */
+  --creation-toggle-track-disabled: rgba(0, 0, 0, 0.05);
+  
+  /* The default font weight for medium text. */
+  --font-weight-medium: 500;
+  /* The default font weight for normal text. */
+  --font-weight-normal: 400;
+  /* The color for focus rings, outlines, and other focus indicators. */
+  --ring: rgba(0, 228, 36, 1.00);
+  /* Shadow for small elevations, such as cards or modals. */
+  --elevation-sm: none;
+  /* The color for chart elements, such as a bar or line in a chart. */
+  --chart-1: rgba(0, 228, 36, 1.00);
+  /* The color for another chart element, such as a bar or line in a chart. */
+  --chart-2: rgba(28, 28, 28, 0.80);
+  /* The color for another chart element, such as a bar or line in a chart. */
+  --chart-3: rgba(156, 163, 175, 1.00);
+  /* The color for another chart element, such as a bar or line in a chart. */
+  --chart-4: rgba(84, 84, 84, 1.00);
+  /* The color for another chart element, such as a bar or line in a chart. */
+  --chart-5: rgba(245, 245, 245, 1.00);
+  /* The default border radius for elements such as buttons, tooltip, and other containers. */
+  --radius: 16px;
+  /* The border radius used for button elements. */
+  --radius-button: 30px;
+  /* The border radius used for card containers. */
+  --radius-card: 20px;
+  /* The background color for sidebars, navigation menus, and other persistent elements. */
+  --sidebar: rgba(255, 255, 255, 0.40);
+  /* The default color for text or elements that appear on top of sidebars, navigation menus, and other persistent elements. */
+  --sidebar-foreground: rgba(28, 28, 28, 1.00);
+  /* The primary color used for buttons, links, and other interactive elements in sidebars and navigation menus. */
+  --sidebar-primary: rgba(28, 28, 28, 1.00);
+  /* The default color for text or elements that appear on top of primary colored elements in sidebars and navigation menus. */
+  --sidebar-primary-foreground: rgba(255, 255, 255, 1.00);
+  /* The accent color used for highlights, links, and other interactive elements in sidebars and navigation menus. */
+  --sidebar-accent: rgba(0, 228, 36, 1.00);
+  /* The default color for text or elements that appear on top of accent colored elements in sidebars and navigation menus. */
+  --sidebar-accent-foreground: rgba(255, 255, 255, 1.00);
+  /* The default border color for elements in sidebars and navigation menus. */
+  --sidebar-border: rgba(255, 255, 255, 0.10);
+  /* The default color for focus rings, outlines, and other focus indicators in sidebars and navigation menus. */
+  --sidebar-ring: rgba(0, 228, 36, 1.00);
+  /* Typography scale - H1 heading size */
+  --text-h1: 15px;
+  /* Typography scale - H2 heading size */
+  --text-h2: 14px;
+  /* Typography scale - H3 heading size */
+  --text-h3: 12px;
+  /* Typography scale - H4 heading size */
+  --text-h4: 10px;
+  /* Typography scale - Paragraph text size */
+  --text-p: 12px;
+  /* Typography scale - Label text size */
+  --text-label: 10px;
+}
+
+.dark {
+  --background: rgba(28, 28, 28, 1.00);
+  --foreground: rgba(241, 244, 255, 1.00);
+  --card: rgba(40, 40, 40, 1.00);
+  --card-foreground: rgba(241, 244, 255, 1.00);
+  --popover: rgba(40, 40, 40, 0.9);
+  --popover-foreground: rgba(241, 244, 255, 1.00);
+  --primary: rgba(0, 228, 36, 1.00);
+  --primary-foreground: rgba(28, 28, 28, 1.00);
+  --secondary: rgba(255, 255, 255, 0.1);
+  --secondary-foreground: rgba(241, 244, 255, 1.00);
+  --muted: rgba(255, 255, 255, 0.1);
+  --muted-foreground: rgba(241, 244, 255, 0.60);
+  --accent: rgba(0, 228, 36, 1.00);
+  --accent-foreground: rgba(28, 28, 28, 1.00);
+  --destructive: rgba(239, 68, 68, 1.00);
+  --destructive-foreground: rgba(255, 255, 255, 1.00);
+  --border: rgba(255, 255, 255, 0.15);
+  --input: rgba(255, 255, 255, 0.1);
+  --input-background: rgba(255, 255, 255, 0.1);
+  --ring: rgba(0, 228, 36, 1.00);
+  --sidebar: rgba(40, 40, 40, 1.00);
+  --sidebar-foreground: rgba(241, 244, 255, 1.00);
+  --sidebar-primary: rgba(0, 228, 36, 1.00);
+  --sidebar-primary-foreground: rgba(28, 28, 28, 1.00);
+  --sidebar-accent: rgba(0, 228, 36, 1.00);
+  --sidebar-accent-foreground: rgba(28, 28, 28, 1.00);
+  --sidebar-border: rgba(255, 255, 255, 0.15);
+  --sidebar-ring: rgba(0, 228, 36, 1.00);
+  
+  /* Creation Page Design System - Dark Mode */
+  --creation-group-bg: rgba(255, 255, 255, 0.05);
+  --creation-card-bg: rgba(255, 255, 255, 0.03);
+  --creation-icon-btn-bg: rgba(255, 255, 255, 0.1);
+  --creation-toggle-knob-bg: rgba(50, 50, 50, 1.00);
+  --creation-toggle-track-disabled: rgba(255, 255, 255, 0.1);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-ring: var(--ring);
+  /* Creation Page Design System Colors */
+  --color-creation-group-bg: var(--creation-group-bg);
+  --color-creation-card-bg: var(--creation-card-bg);
+  --color-creation-icon-btn-bg: var(--creation-icon-btn-bg);
+  --color-creation-toggle-knob-bg: var(--creation-toggle-knob-bg);
+  --color-creation-toggle-track-disabled: var(--creation-toggle-track-disabled);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-button: var(--radius-button);
+  --radius-card: var(--radius-card);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --shadow-elevation-sm: var(--elevation-sm);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: var(--text-h1);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+      font-family: 'SF Pro Display', sans-serif;
+    }
+
+    h2 {
+      font-size: var(--text-h2);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+      font-family: 'SF Pro Display', sans-serif;
+    }
+
+    h3 {
+      font-size: var(--text-h3);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+      font-family: 'SF Pro Display', sans-serif;
+    }
+
+    h4 {
+      font-size: var(--text-h4);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+      font-family: 'SF Pro Display', sans-serif;
+    }
+
+    p {
+      font-size: var(--text-p);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+      font-family: 'SF Pro Display', sans-serif;
+    }
+
+    label {
+      font-size: var(--text-label);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+      font-family: 'SF Pro Display', sans-serif;
+    }
+
+    button {
+      font-size: var(--text-p);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+      font-family: 'SF Pro Display', sans-serif;
+    }
+
+    input {
+      font-size: var(--text-p);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+      font-family: 'SF Pro Display', sans-serif;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+/* 隐藏滚动条的通用类 */
+.hide-scrollbar,
+.no-scrollbar {
+  /* Firefox */
+  scrollbar-width: none;
+  /* IE/Edge */
+  -ms-overflow-style: none;
+}
+/* Webkit 内核浏览器（Chrome/Safari） */
+.hide-scrollbar::-webkit-scrollbar,
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* 强制隐藏滚动条 */
+.scrollbar-none {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+.scrollbar-none::-webkit-scrollbar {
+  display: none !important;
+}
+
+/* 左侧面板滚动条隐藏 */
+.left-panel-scroll {
+  scrollbar-width: none !important;
+  -ms-overflow-style: none !important;
+}
+.left-panel-scroll::-webkit-scrollbar {
+  display: none !important;
+}
+
+/* ===== React Flow 样式覆盖 ===== */
+
+/* 强制 SVG 可见 */
+.react-flow svg,
+.react-flow__edges svg,
+.react-flow__edges,
+.react-flow__edge {
+  overflow: visible !important;
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* 连接线路径样式 - 强制可见 */
+.react-flow__edge-path {
+  stroke: var(--foreground) !important;
+  stroke-width: 2 !important;
+  opacity: 1 !important;
+  fill: none !important;
+  display: block !important;
+  visibility: visible !important;
+}
+
+/* 暗黑模式下的连接线颜色 - 使用 CSS 变量 */
+.dark .react-flow__edge-path {
+  stroke: var(--foreground) !important;
+}
+
+/* 连接线容器 */
+.react-flow__edge {
+  pointer-events: all !important;
+  opacity: 1 !important;
+  display: block !important;
+  visibility: visible !important;
+}
+
+/* 所有 SVG 元素强制可见 */
+.react-flow__edge line,
+.react-flow__edge path,
+.react-flow__edge g {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* 选中状态的连接线 */
+.react-flow__edge.selected .react-flow__edge-path {
+  stroke: var(--primary) !important;
+  stroke-width: 2 !important;
+  opacity: 1 !important;
+}
+
+/* 拖动创建连接时的线条 */
+.react-flow__connectionline {
+  stroke: var(--primary) !important;
+  stroke-width: 2 !important;
+  opacity: 1 !important;
+}
+
+.react-flow__connection-path {
+  stroke: var(--primary) !important;
+  stroke-width: 2 !important;
+  opacity: 1 !important;
+}
+
+/* 箭头标记 - 强制可见 */
+.react-flow__arrowhead {
+  fill: var(--foreground) !important;
+  opacity: 1 !important;
+}
+
+.dark .react-flow__arrowhead {
+  fill: var(--foreground) !important;
+}
+
+.react-flow__edge.selected .react-flow__arrowhead {
+  fill: var(--primary) !important;
+}
+
+/* 节点连接手柄 */
+.react-flow__handle {
+  width: 12px !important;
+  height: 12px !important;
+  opacity: 1 !important;
+  background: var(--primary) !important;
+  border: 2px solid var(--card) !important;
+}
+
+.dark .react-flow__handle {
+  border-color: var(--card) !important;
+}
+
+.react-flow__handle-connecting {
+  opacity: 1 !important;
+}
+
+.react-flow__handle-valid {
+  opacity: 1 !important;
+}
+
+/* 确保 SVG 容器可见 - 更高的优先级 */
+.react-flow__edges {
+  z-index: 10 !important;
+  pointer-events: all !important;
+  position: absolute !important;
+  inset: 0 !important;
+}
+
+.react-flow__nodes {
+  z-index: 20 !important;
+}
+
+/* SVG 元素强制可见 */
+.react-flow__renderer {
+  z-index: 1 !important;
+  position: relative !important;
+}
+
+.react-flow svg {
+  overflow: visible !important;
+  position: absolute !important;
+  inset: 0 !important;
+}
+
+/* 连接线选择区域 */
+.react-flow__edgeupdater {
+  opacity: 1 !important;
+}
+
+/* 确保容器不会裁剪内容 */
+.react-flow__viewport {
+  overflow: visible !important;
+}
+
+.react-flow {
+  overflow: visible !important;
+}
+
+/* React Flow nodrag and nopan classes */
+.react-flow__node .nodrag,
+.react-flow__node .nopan {
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  -webkit-user-select: auto !important;
+  -moz-user-select: auto !important;
+  user-select: auto !important;
+}
+
+.react-flow__node .nodrag:hover,
+.react-flow__node .nopan:hover {
+  pointer-events: auto !important;
+}

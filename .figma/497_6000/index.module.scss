@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+}
+
+.frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 6px;
+  border-radius: 15px;
+  background: var(--Black-3, #00000008);
+  padding: 4px 10px;
+  width: 206px;
+  height: 32px;
+
+  .lora {
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    padding: 2px;
+    width: 16px;
+    height: 16px;
+    overflow: hidden;
+
+    .icon {
+      flex-shrink: 0;
+      width: 9px;
+      height: 3px;
+    }
+  }
+
+  .text {
+    flex-grow: 1;
+    line-height: 17px;
+    letter-spacing: -0.16px;
+    color: var(--Black-40, #1c1c1c66);
+    font-family: "SF Pro Display", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", SimHei, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  .autoWrapper {
+    position: relative;
+    flex-shrink: 0;
+    width: 12px;
+    height: 12px;
+
+    .expandIcon {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 12px;
+      height: 12px;
+      rotate: -90deg;
+    }
+  }
+}
